@@ -10,9 +10,15 @@
 {% endblock %}
 
 {% block body_block %}
-    {% if category %}
-    <h1>{{ category.name }}</h1>
-    {% if pages %}
+    <div class="jumbotron p-4">
+        <div class="container">
+            <h1 class="jumbotron-heading">
+                {% if category %}
+                <h1>{{ category.name }}</h1>
+                {% if pages %}
+            </h1>
+        </div>
+    </div>
     <ul>
         {% for page in pages %}
         <li><a href="{{ page.url }}">{{ page.title }}</a></li>
